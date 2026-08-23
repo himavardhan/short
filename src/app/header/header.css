@@ -1,0 +1,29 @@
+.header {
+  align-items: center;
+  background-color: #1f2937;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.user-profile {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.profile-icon {
+  font-size: 1.25rem;
+}
