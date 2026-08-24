@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "url-shortener": {
+    "shorturl": {
       "projectType": "application",
       "schematics": {},
       "root": "",
