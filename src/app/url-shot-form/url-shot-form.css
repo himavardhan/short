@@ -1,0 +1,119 @@
+.url-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.url-input-container {
+  width: 520px;
+  min-height: 240px;
+  background-color: #f5f9ff;
+  border: 1px solid #d9e6ff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(22, 57, 102, 0.08);
+}
+
+.url-input-container label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #1f3a5b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#url-input {
+  width: 100%;
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #b9cff4;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #23344a;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#url-input:focus {
+  border-color: #4f8ee8;
+  box-shadow: 0 0 0 3px rgba(79, 142, 232, 0.18);
+}
+
+#pin-checkbox {
+  width: 16px;
+  height: 16px;
+  margin: 10px 8px 14px 0;
+  accent-color: #2f6fd2;
+  vertical-align: middle;
+}
+
+label[for="pin-checkbox"] {
+  margin: 10px 0 14px;
+  color: #2b4364;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.url-input-container button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f6fd2;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.url-input-container button:hover {
+  background-color: #255fb7;
+}
+
+.url-input-container button:active {
+  transform: translateY(1px);
+}
+
+.url-input-container button:disabled {
+  background-color: #99b7e8;
+  cursor: not-allowed;
+}
+
+.field-error {
+  margin: 8px 0 10px;
+}
+
+.field-error p {
+  margin: 0;
+  color: #b42318;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.submitted-preview {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #eaf3ff;
+  border: 1px solid #c8ddff;
+  border-radius: 8px;
+  color: #1f3a5b;
+}
+
+.submitted-preview p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.submitted-preview pre {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #d9e6ff;
+  font-size: 12px;
+  overflow-x: auto;
+}

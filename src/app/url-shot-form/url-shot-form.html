@@ -1,0 +1,40 @@
+<div class="url-container">
+        
+        <div class="url-input-container">
+            <form (submit)="onSubmit($event)" novalidate>
+                <label for="url-input">Enter URL to shorten:</label><br>
+                <input id="url-input" type="text" placeholder="Enter URL to shorten" [formField]="urlForm.url" /><br>
+                @if (urlForm.url().touched() && urlForm.url().invalid()) {
+                    <div class="field-error">
+                        @for (error of urlForm.url().errors(); track error.kind) {
+                            <p>{{ error.message || 'Invalid URL' }}</p>
+                        }
+                    </div>
+                }
+                <input id="pin-checkbox" type="checkbox" [formField]="urlForm.usePin" />
+                <label for="pin-checkbox">Add 6-digit PIN security to this short URL (Optional)</label><br><br>
+                <button type="submit" [disabled]="isSubmitting()">{{ isSubmitting() ? 'Shortening...' : 'Shorten' }}</button>
+            </form>
+
+            @if (submitError()) {
+                <div class="field-error">
+                    <p>{{ submitError() }}</p>
+                </div>
+            }
+
+            @if (submittedData(); as data) {
+                <div class="submitted-previews">
+
+                    @if (shortenResult(); as result) {
+                        <p><strong> Response: </strong></p>
+                        <p><strong>Short URL:</strong> {{ result?.shortUrl }}</p>
+                        @if (result?.securityPin) {
+                            <p><strong>Security PIN:</strong> {{ result?.securityPin }}</p>
+                        }
+                    }
+                </div>
+            }
+        </div>
+
+     
+</div>

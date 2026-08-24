@@ -1,0 +1,37 @@
+<div class="pin-container">
+  @if (showVerificationForm()) {
+    <div class="pin-card">
+    <h2>Security PIN Verification is Required</h2>
+    <!-- <p>Unique Word: <strong>{{ uniqueWord() }}</strong></p> -->
+
+    <form (submit)="verifyPin($event)">
+      <label for="pin-input">Enter 6-digit PIN</label>
+      <input
+        id="pin-input"
+        type="text"
+        maxlength="6"
+        inputmode="numeric"
+        placeholder="e.g. 123456"
+        [ngModel]="pinInput()"
+        (ngModelChange)="pinInput.set($event)"
+        name="securityPin"
+      />
+      <button type="submit">Verify and Continue</button>
+    </form>
+
+    @if (errorMessage()) {
+      <p class="error">{{ errorMessage() }}</p>
+    }
+
+    <a routerLink="/">Back to URL Shortener</a>
+  </div>
+}@else{
+    <div class="pin-card">
+        <h2>Verifying short URL...</h2>
+    </div>
+}
+
+
+
+
+</div>
