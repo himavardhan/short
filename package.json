@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /shorturl/",
+    "build": "ng build --base-href /short/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:github-pages": "ng build --base-href /shorturl/",
-    "deploy-to-gh": "npx angular-cli-ghpages --dir=dist/shorturl/browser"
+    "build:github-pages": "ng build --base-href /short/",
+    "deploy-to-gh": "npx angular-cli-ghpages --dir=dist/short/browser"
   },
   "private": true,
   "packageManager": "npm@10.9.8",
