@@ -5,6 +5,6 @@ import { SecurityPinVerification } from './security-pin-verification/security-pi
 export const routes: Routes = [
   { path: '', component: UrlShotForm },
   //{ path: 'shorturl/:uniqueWord', component: UrlShotForm },
-  { path: 'url/:uniqueWord', component: SecurityPinVerification },
+  { path: 'link/:uniqueWord', component: SecurityPinVerification },
   { path: '**', redirectTo: '' },
 ];
