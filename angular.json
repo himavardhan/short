@@ -54,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "url-shortener:build:production"
+              "buildTarget": "short:build:production"
             },
             "development": {
-              "buildTarget": "url-shortener:build:development"
+              "buildTarget": "short:build:development"
             }
           },
           "defaultConfiguration": "development"
